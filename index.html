@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="様々な日本語フォントを比較・確認できるツールです">
+    <title>BAMITANのフォント屋さん</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=M+PLUS+Rounded+1c:wght@400;700&family=Sawarabi+Mincho&family=Sawarabi+Gothic&family=Kosugi+Maru&family=Kosugi&family=Hachi+Maru+Pop&family=Yusei+Magic&family=DotGothic16&family=Train+One&family=RocknRoll+One&family=Reggae+One&family=Dela+Gothic+One&family=Yomogi&family=New+Tegomin&family=Yuji+Syuku&family=Yuji+Hentaigana+Akari&family=Yuji+Boku&display=swap" rel="stylesheet">
+    
+    <style>
+      body {
+        font-family: 'M PLUS Rounded 1c', 'Nunito', sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+      }
+      
+      #root {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      /* ローディングアニメーション */
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        border-top-color: #4f46e5;
+        animation: spin 1s ease-in-out infinite;
+        margin: 2rem auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column; gap: 1rem;">
+        <div class="loading-spinner"></div>
+        <p>読み込み中...</p>
+      </div>
+    </div>
+    
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
